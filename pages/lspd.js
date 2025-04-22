@@ -1,6 +1,5 @@
 import { useSession } from "next-auth/react";
 import { useState } from "react";
-import Navbar from "./Navbar";
 
 export default function LSPDForm() {
   const { data: session } = useSession();
