@@ -9,32 +9,52 @@ export default function Navbar() {
 
   return (
     <div className="relative">
-      <div className="bg-primary fixed top-0 left-0 right-0 z-40 w-full bg-black">
-        <div className="flex justify-between items-center py-5 px-4 max-w-[1760px] mx-auto w-full ">
+      <div className="bg-primary fixed top-0 left-0 right-0 z-40 w-full bg-black bg-opacity-50">
+        <div className="flex justify-between items-center py-1 px-4 max-w-[1760px] mx-auto w-full ">
           {/* Logo - Left */}
-          <img
-            src="/ProjectX-Logo.png"
-            className="font-semibold text-3xl w-10"
-            alt="ProjectX Logo"
-          />
-
+          <button onClick={() => router.push("/")}>
+            <img
+              src="/ProjectX-Logo.png"
+              className="font-semibold text-3xl w-10"
+              alt="ProjectX Logo"
+            />
+          </button>
           {session ? (
             // Navigation + Logout (when logged in)
             <>
               {/* Navigation - Center */}
               <div className="flex-1 flex justify-center">
                 <div className="flex items-center gap-6 py-2 px-5 rounded-full">
+                  
                   <button
-                    onClick={() => router.push("/lspd")}
-                    className="border border-secondary px-3 font-extrabold py-1 bg-[#fffff2] text-primary hover:bg-primary hover:text-secondary transition-all rounded-full"
+                    onClick={() => router.push("/ems")}
+                    className="border border-t-0 border-r-0 border-l-0 px-3 font-bold py-1 text-white"
                   >
-                    LSPD
+                    About Us
                   </button>
                   <button
                     onClick={() => router.push("/ems")}
-                    className="border border-secondary px-3 font-extrabold py-1 bg-[#fffff2] text-primary hover:bg-primary hover:text-secondary transition-all rounded-full"
+                    className="border border-t-0 border-r-0 border-l-0 px-3 font-bold py-1 text-white"
                   >
-                    EMS
+                    Our Team
+                  </button>
+                  <button
+                    onClick={() => router.push("/ems")}
+                    className="border border-t-0 border-r-0 border-l-0 px-3 font-bold py-1 text-white"
+                  >
+                    Rules
+                  </button>
+                  <button
+                    onClick={() => router.push("/lspd")}
+                    className="border border-t-0 border-r-0 border-l-0 px-3 font-bold py-1 text-white"
+                  >
+                    Join LSPD
+                  </button>
+                  <button
+                    onClick={() => router.push("/ems")}
+                    className="border border-t-0 border-r-0 border-l-0 px-3 font-bold py-1 text-white"
+                  >
+                    Join EMS
                   </button>
                 </div>
               </div>
@@ -60,7 +80,7 @@ export default function Navbar() {
 
         {/* Welcome message below navbar, only if logged in */}
         {session && (
-          <div className="w-full bg-black text-white text-center py-6 text-sm">
+          <div className="w-full text-white text-center py-1 text-sm">
             Welcome to Project X,{" "}
             <span className="text-orange-300">{session.user.name}</span>
           </div>
