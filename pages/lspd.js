@@ -57,9 +57,9 @@ export default function LSPDForm() {
   if (!session) return <p>Please login with Discord first.</p>;
 
   return (
-    <div className="bg-[url(/lspd-bg.jpg)] bg-no-repeat bg-center bg-cover">
+    <div className="bg-[url(/lspd-bg.jpg)] bg-no-repeat bg-center bg-cover h-screen w-full">
       <Navbar />
-      <div className="bg-slate-800 bg-opacity-50 pt-24">
+      <div className="bg-slate-800 bg-opacity-50 pt-24 h-screen w-full">
         <form onSubmit={handleSubmit} className="p-4 max-w-4xl mx-auto text-white">
           <h1 className="font-bold mb-4 text-white text-4xl text-center">LSPD Application</h1>
           <div className="lg:flex sm:block">

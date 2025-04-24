@@ -19,7 +19,7 @@ export default function Home() {
         <h1 className="text-white text-5xl font-bold mt-5">Welcome to Project X RolePlay</h1>
         <p className="text-white text-lg mt-5">One of the OLDEST FiveM community of Pakistan. We wish you have a great time here. <span className="text-4xl">&#9829;</span></p>
         <div className="mt-10">
-          <a href="" className="text-white border px-4 py-3">Watch The Trailer</a>&nbsp;&nbsp;<a href="https://discord.gg/eEWEqfbVJr" className="text-white border px-4 py-3" target="_blank">Join Project X Discord</a>
+          <a href="https://www.youtube.com/watch?v=jFk-8TgsfMg" className="text-white border px-4 py-3">Watch The Trailer</a>&nbsp;&nbsp;<a href="https://discord.gg/eEWEqfbVJr" className="text-white border px-4 py-3" target="_blank">Join Project X Discord</a>
         </div>
       </div>
     </div>

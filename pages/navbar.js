@@ -27,19 +27,19 @@ export default function Navbar() {
                 <div className="flex items-center gap-6 py-2 px-5 rounded-full">
                   
                   <button
-                    onClick={() => router.push("/ems")}
+                    onClick={() => router.push("/about")}
                     className="border border-t-0 border-r-0 border-l-0 px-3 font-bold py-1 text-white"
                   >
                     About Us
                   </button>
                   <button
-                    onClick={() => router.push("/ems")}
+                    onClick={() => router.push("/team")}
                     className="border border-t-0 border-r-0 border-l-0 px-3 font-bold py-1 text-white"
                   >
                     Our Team
                   </button>
                   <button
-                    onClick={() => router.push("/ems")}
+                    onClick={() => router.push("/rules")}
                     className="border border-t-0 border-r-0 border-l-0 px-3 font-bold py-1 text-white"
                   >
                     Rules
