@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <div className="relative">
-      <div className="bg-primary fixed top-0 left-0 right-0 z-40 w-full bg-black bg-opacity-50">
+      <div className="bg-primary fixed top-0 left-0 right-0 z-40 w-full bg-black">
         <div className="flex justify-between items-center py-1 px-4 max-w-[1760px] mx-auto w-full ">
           {/* Logo - Left */}
           <button onClick={() => router.push("/")}>
