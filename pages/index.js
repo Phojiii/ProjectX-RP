@@ -29,8 +29,8 @@ export default function Home() {
               One of the oldest FiveM community of Pakistan, <br /> We wish you have a great time here.<span className="text-2xl">&#9829;</span>
             </p>
             <div className="mt-6 flex gap-4">
-              <a href="#" className="px-6 py-2 border border-white rounded-md font-semibold">Watch Trailer</a>
-              <a href="#" className="px-6 py-2 border border-white rounded-md font-semibold">Discord</a>
+              <a href="https://www.youtube.com/watch?v=jFk-8TgsfMg" className="px-6 py-2 border border-white rounded-md font-semibold">Watch Trailer</a>
+              <a href="https://discord.gg/eEWEqfbVJr" className="px-6 py-2 border border-white rounded-md font-semibold" target="_blank">Discord</a>
             </div>
           </div>
         </div>
