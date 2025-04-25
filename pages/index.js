@@ -52,44 +52,44 @@ export default function Home() {
       </div>
       {/* Our Team */}
       <div className="bg-[url(/ourteam-bg.png)] bg-no-repeat bg-center bg-cover w-full">
-      <div className="bg-black bg-opacity-50">
-        <div className="w-4/5 block m-auto py-40">
-          <h2 className="flex text-white leading-none text-4xl mb-10"><RiTeamFill />&nbsp;&nbsp;Our Team</h2>
-          <div className="flex justify-between items-center gap-10">
-            <div className="text-center border rounded-lg border-gray-600 bg-black bg-opacity-50 text-white py-6 px-6 w-full">
-              <img src="/raja.gif" alt="" className="block m-auto w-1/4 rounded-lg" />
-              <h2 className="text-xl">RAJA</h2>
-              <p className="text-gray-400 leading-none mt-6 text-sm">Whereas disregard and contempt for human rights have resulted Whereas disregard </p>
-              <h3 className="text-xl font-bold mt-20 block uppercase">Owner</h3>
+        <div className="bg-black bg-opacity-50">
+          <div className="w-4/5 block m-auto py-40">
+            <h2 className="flex text-white leading-none text-4xl mb-10"><RiTeamFill />&nbsp;&nbsp;Our Team</h2>
+            <div className="flex justify-between items-center gap-10">
+              <div className="text-center border rounded-lg border-gray-600 bg-black bg-opacity-50 text-white py-6 px-6 w-full">
+                <img src="/raja.gif" alt="" className="block m-auto w-1/4 rounded-lg" />
+                <h2 className="text-xl">RAJA</h2>
+                <p className="text-gray-400 leading-none mt-6 text-sm">Whereas disregard and contempt for human rights have resulted Whereas disregard </p>
+                <h3 className="text-xl font-bold mt-20 block uppercase">Owner</h3>
+              </div>
+              <div className="text-center border rounded-lg border-gray-600 bg-black bg-opacity-50 text-white py-6 px-6 w-full">
+                <img src="/tits.png" alt="" className="block m-auto w-1/4 rounded-lg" />
+                <h2 className="text-xl">Maxtitan</h2>
+                <p className="text-gray-400 leading-none mt-6 text-sm">Whereas disregard and contempt for human rights have resulted Whereas disregard </p>
+                <h3 className="text-xl font-bold mt-20 block uppercase">Founder</h3>
+              </div>
+              <div className="text-center border rounded-lg border-gray-600 bg-black bg-opacity-50 text-white py-6 px-6 w-full">
+                <img src="/team-icon.png" alt="" className="block m-auto w-1/4 rounded-lg" />
+                <h2 className="text-xl">Osman</h2>
+                <p className="text-gray-400 leading-none mt-6 text-sm">Whereas disregard and contempt for human rights have resulted Whereas disregard </p>
+                <h3 className="text-xl font-bold mt-20 block uppercase">FiveM Developer</h3>
+              </div>
+              <div className="text-center border rounded-lg border-gray-600 bg-black bg-opacity-50 text-white py-6 px-6 w-full">
+                <img src="/chokez.png" alt="" className="block m-auto w-1/4 rounded-lg" />
+                <h2 className="text-xl">ChoKez</h2>
+                <p className="text-gray-400 leading-none mt-6 text-sm">Whereas disregard and contempt for human rights have resulted Whereas disregard </p>
+                <h3 className="text-xl font-bold mt-20 block uppercase">Lead Admin</h3>
+              </div>
+              <div className="text-center border rounded-lg border-gray-600 bg-black bg-opacity-50 text-white py-6 px-6 w-full">
+                <img src="/phoji.png" alt="" className="block m-auto w-1/4 rounded-lg" />
+                <h2 className="text-xl">PHOJi</h2>
+                <p className="text-gray-400 leading-none mt-6 text-sm">Whereas disregard and contempt for human rights have resulted Whereas disregard </p>
+                <h3 className="text-xl font-bold mt-20 block uppercase">Web Developer</h3>
+              </div>
             </div>
-            <div className="text-center border rounded-lg border-gray-600 bg-black bg-opacity-50 text-white py-6 px-6 w-full">
-              <img src="/tits.png" alt="" className="block m-auto w-1/4 rounded-lg" />
-              <h2 className="text-xl">Maxtitan</h2>
-              <p className="text-gray-400 leading-none mt-6 text-sm">Whereas disregard and contempt for human rights have resulted Whereas disregard </p>
-              <h3 className="text-xl font-bold mt-20 block uppercase">Founder</h3>
-            </div>
-            <div className="text-center border rounded-lg border-gray-600 bg-black bg-opacity-50 text-white py-6 px-6 w-full">
-              <img src="/team-icon.png" alt="" className="block m-auto w-1/4 rounded-lg" />
-              <h2 className="text-xl">Osman</h2>
-              <p className="text-gray-400 leading-none mt-6 text-sm">Whereas disregard and contempt for human rights have resulted Whereas disregard </p>
-              <h3 className="text-xl font-bold mt-20 block uppercase">FiveM Developer</h3>
-            </div>
-            <div className="text-center border rounded-lg border-gray-600 bg-black bg-opacity-50 text-white py-6 px-6 w-full">
-              <img src="/chokez.png" alt="" className="block m-auto w-1/4 rounded-lg" />
-              <h2 className="text-xl">ChoKez</h2>
-              <p className="text-gray-400 leading-none mt-6 text-sm">Whereas disregard and contempt for human rights have resulted Whereas disregard </p>
-              <h3 className="text-xl font-bold mt-20 block uppercase">Lead Admin</h3>
-            </div>
-            <div className="text-center border rounded-lg border-gray-600 bg-black bg-opacity-50 text-white py-6 px-6 w-full">
-              <img src="/phoji.png" alt="" className="block m-auto w-1/4 rounded-lg" />
-              <h2 className="text-xl">PHOJi</h2>
-              <p className="text-gray-400 leading-none mt-6 text-sm">Whereas disregard and contempt for human rights have resulted Whereas disregard </p>
-              <h3 className="text-xl font-bold mt-20 block uppercase">Web Developer</h3>
-            </div>
+            <button onClick={() => router.push("/team")} className="block m-auto w-32 bg-white text-center rounded-md py-3 mt-10 font-bold">View More</button>
           </div>
-          <button onClick={() => router.push("/team")} className="block m-auto w-32 bg-white text-center rounded-md py-3 mt-10 font-bold">View More</button>
         </div>
-      </div>
       </div>
     </div>
   );
