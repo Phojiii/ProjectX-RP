@@ -6,7 +6,7 @@ export default NextAuth({
     DiscordProvider({
       clientId: process.env.DISCORD_CLIENT_ID,  // Discord Client ID from .env.local
       clientSecret: process.env.DISCORD_CLIENT_SECRET,  // Discord Client Secret from .env.local
-      redirectUri: "https://projectxpk.com/api/auth/callback/discord",
+      redirectUri: "http://projectxpk.com/api/auth/callback/discord",
     }),
   ],
   callbacks: {
