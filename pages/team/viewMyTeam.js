@@ -57,7 +57,7 @@ export default function MyTeamPage() {
             <h2 className="text-2xl font-semibold text-white mb-4">
               Team Name: <span className="text-orange-400">{team.name}</span>
             </h2>
-            <h2 className="text-lg font-semibold text-white mb-2">Team Captain: {roleLabel}</h2>
+            <h2 className="text-lg font-semibold text-white mb-2">Team Captain: {team.captain.username}</h2>
             <h3 className="text-lg font-semibold text-white mb-2">Members:</h3>
             <ul className="list-disc list-inside space-y-2">
               {team.players.map((player) => (

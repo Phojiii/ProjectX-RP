@@ -5,23 +5,31 @@ export default async function handler(req, res) {
 
   const { type, userDiscordId, discordUsername, answers } = req.body;
 
-  // Your separate webhook URLs
+  // Webhook URLs
   const webhookUrlLSPD = "https://discord.com/api/webhooks/1366146029740884139/3EyT0SQppQyuZPt-r84CJVTkPqLKxAWZpXysnrB-bB2u1h4rpGqmHv2Tog97AFFmijjv";
   const webhookUrlEMS = "https://discord.com/api/webhooks/1366149866308374590/2pSwCJNx-MjMMw8upKKhfOQQ7Qi2ZomMxiyxOEXcWDNSeqBi3_FbdJybLmY66meIyoVI";
+  const webhookUrlValorant = "https://discord.com/api/webhooks/1366164281590284288/d2obvog7DcLG1CxEsRIYk5DVDmWwd81-BtTzYLlZuFwE-MWit3KZVm7YGHiEzHMMpB3w";
 
   let selectedWebhook = null;
 
-  // Decide which webhook to use based on type
-  if (type.toLowerCase() === "lspd") {
-    selectedWebhook = webhookUrlLSPD;
-  } else if (type.toLowerCase() === "ems") {
-    selectedWebhook = webhookUrlEMS;
-  } else {
-    return res.status(400).json({ message: "Invalid application type" });
+  switch (type.toLowerCase()) {
+    case "lspd":
+      selectedWebhook = webhookUrlLSPD;
+      break;
+    case "ems":
+      selectedWebhook = webhookUrlEMS;
+      break;
+    case "valorant":
+      selectedWebhook = webhookUrlValorant;
+      break;
+    default:
+      return res.status(400).json({ message: "Invalid application type" });
   }
 
   const message = {
-    content: `📝 New **${type} Application** submitted:\n\n**User:** ${discordUsername} (ID: ${userDiscordId})\n\n**Answers:**\n${Object.entries(answers).map(([q, a]) => `• **${q}**: ${a}`).join("\n")}`,
+    content: `📝 New **${type.toUpperCase()} Application** submitted:\n\n**User:** ${discordUsername} (ID: ${userDiscordId})\n\n**Answers:**\n${Object.entries(answers)
+      .map(([q, a]) => `• **${q}**: ${a}`)
+      .join("\n")}`,
   };
 
   try {
