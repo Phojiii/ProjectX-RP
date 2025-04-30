@@ -45,7 +45,6 @@ export default NextAuth({
       session.user.id = token.sub;
       session.user.roles = token.roles || [];
       session.accessToken = token.accessToken;
-      console.log("Current User Roles is:", session.user.roles);
       return session;
     },
   },

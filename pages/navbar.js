@@ -10,6 +10,7 @@ export default function Navbar() {
   const [isTournamentOpen, setIsTournamentOpen] = useState(false);
   const [isTeamOpen, setIsTeamOpen] = useState(false);
 
+
   const toggleTournamentDropdown = () => {
     setIsTournamentOpen((prev) => !prev);
     setIsTeamOpen(false);
@@ -66,29 +67,30 @@ export default function Navbar() {
                   <button onClick={() => router.push("/ems")} className="border border-t-0 border-r-0 border-l-0 px-3 font-bold py-1 text-white">
                     Join EMS
                   </button>
-
                   {/* Tournament Dropdown */}
-                  <div className="relative">
-                    <button onClick={toggleTournamentDropdown} className="px-3 py-1 font-bold text-white border border-t-0 border-r-0 border-l-0">
-                      Tournament
-                    </button>
-                    {isTournamentOpen && (
-                      <div className="absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50">
-                        <button onClick={() => router.push("/tournament/create")} className="block w-full text-left text-white pl-4 py-2 text-sm hover:bg-gray-700 rounded-lg">
-                          Create Tournament
-                        </button>
-                        <button onClick={() => router.push("/tournament/matches")} className="block w-full text-left text-white pl-4 py-2 text-sm hover:bg-gray-700 rounded-lg">
-                          Tournament Matches
-                        </button>
-                        <button onClick={() => router.push("/tournament/register")} className="block w-full text-left text-white pl-4 py-2 text-sm hover:bg-gray-700 rounded-lg">
-                          Register Participant
-                        </button>
-                        <button onClick={() => router.push("/tournament/updateScore")} className="block w-full text-left text-white pl-4 py-2 text-sm hover:bg-gray-700 rounded-lg">
-                          Update Match Score
-                        </button>
-                      </div>
-                    )}
-                  </div>
+                  {userRoles.includes(adminRole) && (  
+                    <div className="relative">
+                      <button onClick={toggleTournamentDropdown} className="px-3 py-1 font-bold text-white border border-t-0 border-r-0 border-l-0">
+                        Tournament
+                      </button>
+                      {isTournamentOpen && (
+                        <div className="absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50">
+                          <button onClick={() => router.push("/tournament/create")} className="block w-full text-left text-white pl-4 py-2 text-sm hover:bg-gray-700 rounded-lg">
+                            Create Tournament
+                          </button>
+                          <button onClick={() => router.push("/tournament/matches")} className="block w-full text-left text-white pl-4 py-2 text-sm hover:bg-gray-700 rounded-lg">
+                            Tournament Matches
+                          </button>
+                          <button onClick={() => router.push("/tournament/register")} className="block w-full text-left text-white pl-4 py-2 text-sm hover:bg-gray-700 rounded-lg">
+                            Register Participant
+                          </button>
+                          <button onClick={() => router.push("/tournament/updateScore")} className="block w-full text-left text-white pl-4 py-2 text-sm hover:bg-gray-700 rounded-lg">
+                            Update Match Score
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  )}
 
                   {/* Team Registration Dropdown */}
                   <div className="relative">
@@ -100,16 +102,14 @@ export default function Navbar() {
                         <button onClick={() => router.push("/team/create")} className="block w-full text-left text-white pl-4 py-2 text-sm hover:bg-gray-700 rounded-lg">
                           Create Team
                         </button>
-                        <button onClick={() => router.push("/team/join/[teamId].js")} className="block w-full text-left text-white pl-4 py-2 text-sm hover:bg-gray-700 rounded-lg">
-                          View Team
-                        </button>
                         <button onClick={() => router.push("/team/viewMyTeam")} className="block w-full text-left text-white pl-4 py-2 text-sm hover:bg-gray-700 rounded-lg">
                           My Team
                         </button>
-                        {/* For Admins Only */}
-                        <button onClick={() => router.push("/team/viewAllTeams")} className="block w-full text-left text-white pl-4 py-2 text-sm hover:bg-gray-700 rounded-lg">
-                          View All Teams
-                        </button>
+                        {userRoles.includes(adminRole) && (
+                          <button onClick={() => router.push("/team/viewAllTeams")} className="block w-full text-left text-white pl-4 py-2 text-sm hover:bg-gray-700 rounded-lg">
+                            View All Teams
+                          </button>
+                        )}
                       </div>
                     )}
                   </div>
