@@ -7,9 +7,8 @@ export default function App({ Component, pageProps: { session, ...pageProps } })
     <>
       {/* Google AdSense Script */}
       <Script
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4624388385890799"
-        strategy="afterInteractive"
-        crossOrigin="anonymous"
+        async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4624388385890799"
+        crossorigin="anonymous"
       />
       <SessionProvider session={session}>
         <Component {...pageProps} />
