@@ -6,7 +6,7 @@ export default function About () {
             <Navbar />
             <div className="bg-[url(/about-bg.png)] bg-no-repeat bg-center bg-cover w-full h-screen fixed overflow-auto">
                 <div className="bg-black bg-opacity-50">
-                    <div className="max-w-screen-xl block m-auto text-white pt-32">
+                    <div className="lg:max-w-screen-xl w-[90%] block m-auto text-white pt-32">
                         <h1 className="text-4xl font-bold pb-10 text-center">About Project X</h1>
                         <p>Project X is a FiveM roleplay server that was founded in 2018, driven by a vision to create a unique and immersive GTA V RP experience unlike any other. What started as a small group of passionate players and developers has grown into a dynamic and ever-evolving community where creativity, realism, and connection are at the core of everything we do.</p>
                         <h2 className="text-2xl font-bold pt-10 pb-3">Our Mission</h2>

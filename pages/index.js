@@ -46,19 +46,19 @@ export default function Home() {
       </div>
 
       <div className="relative w-full h-screen">
-        <div className="absolute inset-0 bg-black clip-path-custom flex items-center pl-20">
+        <div className="absolute inset-0 bg-black clip-path-custom flex items-center pl-0 md:pl-20">
           <div className="text-white">
-            <h2 className="text-3xl font-bold">
+            <h2 className="text-xl md:text-3xl font-bold">
               Hi, <span className="text-orange-400 capitalize">{userName}</span>
             </h2>
-            <h1 className="text-7xl font-bold mt-4">PROJECT X</h1>
-            <p className="mt-2 text-gray-400 leading-none">
+            <h1 className="text-4xl md:text-7xl font-bold mt-4">PROJECT X</h1>
+            <p className="mt-2 text-gray-400 leading-none text-[10px] md:text-sm">
               One of the oldest FiveM community of Pakistan, <br />
               We wish you have a great time here. <span className="text-2xl">&#9829;</span>
             </p>
             <div className="mt-6 flex gap-4">
-              <a href="https://www.youtube.com/watch?v=jFk-8TgsfMg" className="px-6 py-2 border border-white rounded-md font-semibold">Watch Trailer</a>
-              <a href="https://discord.gg/eEWEqfbVJr" className="px-6 py-2 border border-white rounded-md font-semibold" target="_blank">Discord</a>
+              <a href="https://www.youtube.com/watch?v=jFk-8TgsfMg" className="px-3 md:px-6 py-1 md:py-2 border border-white rounded-md font-semibold">Watch Trailer</a>
+              <a href="https://discord.gg/eEWEqfbVJr" className="px-3 md:px-6 py-1 md:py-2 border border-white rounded-md font-semibold" target="_blank">Discord</a>
             </div>
 
             {/* Optional: Display roles */}
@@ -74,11 +74,13 @@ export default function Home() {
       </div>
 
       {/* Cuteyapa Section */}
-      <div className="bg-black h-60 flex justify-between items-center px-20 text-white">
+      <div className="bg-black text-white px-6 md:px-20 py-10 md:h-60 flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0">
         {["Placeholder", "Placeholder", "Placeholder"].map((title, index) => (
-          <div className="text-center w-1/3" key={index}>
-            <h2 className="text-3xl font-bold mb-2">{title}</h2>
-            <p>Whereas disregard and contempt for human rights have resulted</p>
+          <div className="text-center w-full md:w-1/3" key={index}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">{title}</h2>
+            <p className="text-sm md:text-base">
+              Whereas disregard and contempt for human rights have resulted
+            </p>
           </div>
         ))}
       </div>
@@ -86,12 +88,12 @@ export default function Home() {
       {/* Our Team Section */}
       <div className="bg-[url(/ourteam-bg.png)] bg-no-repeat bg-center bg-cover w-full">
         <div className="bg-black bg-opacity-50">
-          <div className="w-4/5 block m-auto py-40">
-            <h2 className="flex text-white leading-none text-4xl mb-10">
+          <div className="w-11/12 md:w-4/5 block m-auto py-20 md:py-40">
+            <h2 className="flex items-center justify-center text-white leading-none text-2xl md:text-4xl mb-10">
               <RiTeamFill />&nbsp;&nbsp;Our Team
             </h2>
 
-            <div className="flex justify-between items-center gap-10">
+            <div className="flex flex-col md:flex-row flex-wrap justify-center md:justify-between items-center gap-1 md:gap-1">
               {[
                 { name: "RAJA", role: "Owner", image: "/team/raja.gif" },
                 { name: "Maxtitan", role: "Founder", image: "/team/tits.png" },
@@ -101,31 +103,34 @@ export default function Home() {
               ].map((member, index) => (
                 <div
                   key={index}
-                  className="text-center border rounded-lg border-gray-600 bg-black bg-opacity-50 text-white py-6 px-6 w-full"
+                  className="text-center border rounded-lg border-gray-600 bg-black bg-opacity-50 text-white py-6 px-4 max-w-[90%] md:max-w-[18%]"
                 >
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="block m-auto w-1/4 rounded-lg"
+                    className="block m-auto w-1/2 md:w-1/4 rounded-lg"
                   />
-                  <h2 className="text-xl">{member.name}</h2>
-                  <p className="text-gray-400 leading-none mt-6 text-sm">
+                  <h2 className="text-lg md:text-xl mt-4">{member.name}</h2>
+                  <p className="text-gray-400 leading-none mt-4 text-xs md:text-sm">
                     Whereas disregard and contempt for human rights have resulted
                   </p>
-                  <h3 className="text-xl font-bold mt-20 block uppercase">{member.role}</h3>
+                  <h3 className="text-sm md:text-xl font-bold mt-10 md:mt-20 block uppercase">
+                    {member.role}
+                  </h3>
                 </div>
               ))}
             </div>
 
             <button
               onClick={() => router.push("/team")}
-              className="block m-auto w-32 bg-white text-center rounded-md py-3 mt-10 font-bold"
+              className="block m-auto w-full sm:w-40 bg-white text-center rounded-md py-3 mt-10 font-bold text-black"
             >
               View More
             </button>
           </div>
         </div>
       </div>
+
     </div>
   );
 }

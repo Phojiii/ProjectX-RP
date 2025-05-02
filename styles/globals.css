@@ -107,5 +107,10 @@ h3 {
 }
 .clip-path-custom {
 	clip-path: polygon(0 0, 45% 0, 30% 100%, 0% 100%);
-  }
+}
+@media (max-width: 768px) {
+    .clip-path-custom {
+		clip-path: polygon(0 0, 100% 0, 20% 100%, 0% 100%);
+	}
+}
   

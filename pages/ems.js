@@ -57,7 +57,7 @@ export default function EMSForm() {
   if (!session) return <p>Please login with Discord first.</p>;
 
   return (
-    <div className="bg-[url(/ems-bg.png)] bg-no-repeat bg-center bg-cover h-screen w-full">
+    <div className="bg-[url(/ems-bg.png)] bg-no-repeat bg-center bg-cover w-full h-screen fixed overflow-auto">
       <Navbar />
       <div className="bg-slate-800 bg-opacity-75 pt-24 h-screen w-full">
         <form onSubmit={handleSubmit} className="p-4 max-w-4xl mx-auto text-white">

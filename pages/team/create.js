@@ -114,7 +114,7 @@ export default function CreateTeam() {
 
           <button
             type="submit"
-            className="w-full bg-green-600 hover:bg-green-700 p-4 rounded text-xl"
+            className="w-full bg-green-600 hover:bg-green-700 text-center py-2 rounded text-xl"
           >
             Create Team
           </button>
