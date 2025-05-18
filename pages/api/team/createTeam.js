@@ -36,8 +36,7 @@ export default async function handler(req, res) {
     await db.collection('teams').insertOne(newTeam);
 
     // Send message to Discord webhook
-    const webhookUrl =
-      'https://discord.com/api/webhooks/1366164281590284288/d2obvog7DcLG1CxEsRIYk5DVDmWwd81-BtTzYLlZuFwE-MWit3KZVm7YGHiEzHMMpB3w';
+    const webhookUrl = process.env.DISCORD_TOURNAMENT_WEBHOOK_URL;
 
     const discordMessage = {
       content: `🚨 **New Valorant Team Registered!**\n\n**Team Name:** ${teamName}\n**Captain:** ${captainUsername} (ID: ${captainId})\n**Team ID:** ${teamId}`,
