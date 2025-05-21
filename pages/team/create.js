@@ -100,9 +100,9 @@ export default function CreateTeam() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 p-4 text-white">
       <Navbar />
-      <h1 className="text-4xl font-bold mb-6">Create a Team</h1>
+      <h1 className="text-4xl font-bold mb-6">⚠️ Registration has been Closed. ⚠️</h1>
 
-      {!alreadyInTeam ? (
+      {/* {!alreadyInTeam ? (
         <form onSubmit={handleCreateTeam} className="w-full max-w-md">
           <input
             type="text"
@@ -141,7 +141,7 @@ export default function CreateTeam() {
             {teamLink}
           </a>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
