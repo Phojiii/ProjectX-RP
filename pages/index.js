@@ -1,8 +1,10 @@
-"use client";
+import { useEffect, useState } from "react";
+
 export default function Home() {
+
   return (
-    <div className="relative">
-      <p>Project X</p>
+    <div>
+      <h1 style={{ textAlign: 'center' }}>Thanks to ChokeZ, Best Management Ever.</h1>
     </div>
   );
 }
